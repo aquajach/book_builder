@@ -1,7 +1,7 @@
 {
-  "name": "code-kata",
+  "name": "book-builder",
   "version": "1.0.0",
-  "description": "A Roman-Arabic numeric converter in TDD workshop",
+  "description": "An interface to create books",
   "main": "index.js",
   "scripts": {
     "test": "mocha index.spec.js --ui bdd"
@@ -12,5 +12,8 @@
     "esm": "^3.2.25",
     "mocha": "^8.3.2",
     "chai": "^4.3.4"
+  },
+  "dependencies": {
+    "jsdom": "^16.5.2"
   }
 }
