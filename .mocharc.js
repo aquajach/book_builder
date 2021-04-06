@@ -5,6 +5,6 @@
 // Otherwise, JSON or YAML is recommended.
 
 module.exports = {
-  require: 'esm',
+  require: ['esm', 'babel-register'],
   reporters: 'spec'
 };
