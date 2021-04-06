@@ -1,12 +1,21 @@
-import Selector from "./selector"
 import "./setup"
+import BookBuilderSelector from "./BookBuilderSelector"
 
 const expect = require("chai").expect
 
 describe("Book Builder", function() {
-  const container = new Selector('body')
+  let form
 
-  it("shows the from", function() {
-    expect(container.has("#book-builder")).to.eql(true)
+  beforeEach(function () {
+    form = new BookBuilderSelector()
+  })
+
+  it("shows the form", function() {
+    expect(form.exists()).to.eql(true)
+  })
+
+  it("shows book name field", function () {
+    expect(form.getNameFieldLabelText()).to.eql("Book Name")
+    expect(form.getNameFieldInputValue()).to.eql("")
   })
 })

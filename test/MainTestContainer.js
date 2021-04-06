@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import MainContainer from '../MainContainer.jsx'
-require('babel-polyfill')
 
 export default class MainTestContainer {
   constructor () {

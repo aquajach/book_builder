@@ -11,7 +11,6 @@ export default class Selector {
   }
 
   has (selector) {
-    console.log($(this.elem).html())
     const element = this.elem.find(selector)
     return element.length > 0
   }
