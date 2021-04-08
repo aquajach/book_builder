@@ -1,17 +1,14 @@
+import {Simulate} from "react-dom/test-utils"
+
+const trigger = ($elem, event, config = {}) => {
+  const trigger = Simulate[event]
+  if (!$elem.length) throw new Error(`${event} target does not exist`)
+  trigger($elem[0], config)
+}
+
 export default class Selector {
   constructor (selector) {
     this.selector = selector
     this.elem = $(selector)
-  }
-
-  find (dom) {
-    const element = this.elem.find(dom)
-    if (element.length === 0) throw Error(`Expected to find '${dom}' in '${this.selector}' but no match`)
-    return element
-  }
-
-  has (selector) {
-    const element = this.elem.find(selector)
-    return element.length > 0
   }
 }

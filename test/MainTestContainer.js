@@ -8,16 +8,11 @@ export default class MainTestContainer {
   }
 
   start () {
-    this.component = ReactDom.render(<MainContainer />, this.attachTo)
+    ReactDom.render(<MainContainer />, this.attachTo)
   }
 
   stop () {
     ReactDom.unmountComponentAtNode(this.attachTo)
     this.attachTo.innerHTML = null
-  }
-
-  reload () {
-    this.stop()
-    this.component = ReactDom.render(<MainContainer />, this.attachTo)
   }
 }
