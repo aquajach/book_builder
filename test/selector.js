@@ -11,4 +11,8 @@ export default class Selector {
     this.selector = selector
     this.elem = $(selector)
   }
+
+  find(selector) {
+    return this.elem.find(selector)
+  }
 }
